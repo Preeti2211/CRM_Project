@@ -42,11 +42,13 @@ class AuthenticatedSessionController extends Controller
             return redirect()->intended('admin/dashboard');
         } else if($user->user_role == "project manager"){
             return redirect()->intended('project-manager/dashboard');
+        }else if($user->user_role == "hr manager"){
+            return redirect()->intended('hr-manager/dashboard');
         }
     }
 
     /**
-     * Destroy an authenticated session.
+     * Destroy an authenticated session.hr manager
      */
     public function destroy(Request $request): RedirectResponse
     {

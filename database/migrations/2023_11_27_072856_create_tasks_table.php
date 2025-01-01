@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('priority');
             $table->timestamp('start_date');
             $table->longtext('project_id');
+            $table->string('developer_id');
             $table->string('status');
             $table->timestamps();
         });

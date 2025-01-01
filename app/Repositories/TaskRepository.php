@@ -36,6 +36,7 @@ class TaskRepository implements TaskInterface
 
     public function save($id,$items)
     {
+        // dd($items['developer']);
         $data= Task::create([ 'task_name' => $items['task_name'],
             'description' => $items['description'],
             'start_date' => $items['start_date'],
